@@ -1,27 +1,38 @@
-# Quaked - Earthquake Checker
+# 🌍 Quaked | IRL: Your Friendly Earthquake Buddy 🌍
 
-Quaked is a simple Bash script that checks for recent earthquakes within **100 miles** of a given ZIP code using the USGS Earthquake API.
+Welcome to **Quaked**, the adorable little script that keeps you informed about earthquakes near you! Whether you're curious or just want to stay safe, Quaked has got your back. 🐾
 
-## Features
-- Uses a local ZIP code database (`zipcodes/uszips.csv`) to find latitude and longitude.
-- Queries the USGS Earthquake API for quakes in the past **two weeks**.
-- Filters results by **minimum magnitude of 1.0**.
-- Displays earthquake **magnitude, location, and time**.
+---
 
-## Requirements
-- **GNU Coreutils** (for `date`, `grep`, `awk`, `sed`)
-- **curl** (to fetch earthquake data)
-- A ZIP code database in CSV format (`zipcodes/uszips.csv`)
+## 🚀 How It Works
 
-## Installation
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/Quaked.git
-   cd Quaked
+Quaked is a simple Bash script that:
+1. Asks for your ZIP code 📍
+2. Fetches your latitude and longitude 🌐
+3. Checks the USGS database for recent earthquakes near you 🌋
+4. Displays the results in a cute and easy-to-read format 📊
 
-2. Ensure the script is executable:
-   ```chmod +x quaked.sh
+🐾 Why Quaked?
 
-3. Install dependencies (if missing):
-   ```sudo apt install curl  # Debian/Ubuntu
-   brew install curl      # macOS
+- **Cute and Simple**: No complicated interfaces, just pure bash magic! ✨
+- **Informative**: Get details like magnitude, location, and time of recent quakes. 📅
+- **Peace of Mind**: Stay informed about seismic activity near you. 🧘‍♀️
+
+---
+
+🐛 Bugs & Issues
+
+Found a bug? Or maybe you just want to say hi? 🐶  
+Open an issue on GitHub or send me a message! I’d love to hear from you. 💌
+
+---
+
+📜 License
+
+The US ZIP code data is subject to the license provided in its directory. All other data, including earthquake information, is subject to the USGS and their respective terms of use. 🎈
+
+---
+
+🐾 Happy Quaking!
+
+Stay safe, stay curious, and remember: Quaked loves you! 💖
