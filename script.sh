@@ -34,7 +34,9 @@ latitude=$(echo "$location_data" | awk -F',' '{print $2}' | tr -d '"')
 longitude=$(echo "$location_data" | awk -F',' '{print $3}' | tr -d '"')
 
 # Show the user
+echo " "
 echo "Location: $latitude, $longitude"
+echo " "
 
 # Pull the date so you only get recent events
 get_2weeks_ago_timestamp() {
