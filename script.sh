@@ -63,6 +63,7 @@ fi
 
 # Display the output to the user
 echo "Recent earthquakes near your location:"
+echo " "
 
 # Extract and format earthquake details
 echo "$response" | grep -o '"mag":[0-9.]*\|"place":"[^"]*"\|"time":[0-9]*' | sed 's/"//g' |
