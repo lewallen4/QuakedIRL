@@ -17,6 +17,7 @@ if [ -z "$location_data" ]; then
     exit 1
 fi
 
+
 latitude=$(echo "$location_data" | awk -F',' '{print $2}' | tr -d '"')
 longitude=$(echo "$location_data" | awk -F',' '{print $3}' | tr -d '"')
 
