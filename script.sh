@@ -78,3 +78,4 @@ while read -r line; do
             ;;
     esac
 done
+read -p " " end
