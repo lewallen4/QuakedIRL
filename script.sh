@@ -65,7 +65,7 @@ fi
 echo "Recent earthquakes near your location:"
 echo " "
 
-# Extract and format earthquake details
+# Extract and format earthquake details, write to quakes.txt
 echo "$response" | grep -o '"mag":[0-9.]*\|"place":"[^"]*"\|"time":[0-9]*' | sed 's/"//g' |
 while read -r line; do
     case "$line" in
@@ -73,11 +73,15 @@ while read -r line; do
         place:*) location=${line#*:} ;;
         time:*)
             timestamp=${line#*:}
-            date_time=$(date -d @"$((timestamp / 1000))" +"%Y-%m-%d %H:%M:%S")
-            echo "Magnitude: $magnitude | Location: $location | Time: $date_time"
+            date_time=$(date -d @"$((timestamp / 1000))" +"%Y-%m-%d %H:%M")
+            echo "Magnitude: $magnitude | $location | $date_time"
             ;;
     esac
-done
+done > quakes.txt
+
+# Print quakes.txt in reverse order
+tac quakes.txt
+
 
 read -p " " end
 
